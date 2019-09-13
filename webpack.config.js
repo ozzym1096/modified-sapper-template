@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const path = require('path')
 const config = require('sapper/config/webpack.js')
 const pkg = require('./package.json')
+const sveltePreprocess = require('svelte-preprocess')
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
