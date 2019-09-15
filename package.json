@@ -1,10 +1,10 @@
 {
-  "name": "sapper-template",
+  "name": "TODO",
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build",
+    "dev": "set NODE_ENV=development && sapper dev",
+    "build": "set NODE_ENV=production && sapper build",
     "export": "sapper export",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
