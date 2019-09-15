@@ -10,16 +10,16 @@ const dev = NODE_ENV === 'development';
 app.use(
 	helmet(),
 	helmet.expectCt({
-		enforce: true
+		enforce: true,
 	}),
 	helmet.referrerPolicy({
-		policy: 'strict-origin'
+		policy: 'strict-origin',
 	}),
-	compression({threshold: 0}),
-	express.static('static', {immutable: dev}),
+	compression({ threshold: 0 }),
+	express.static('static', { immutable: dev }),
 	sapper.middleware()
-)
+);
 
-app.listen(PORT, err => {
-	if (err) console.log('error: ', err)
-})
+app.listen(PORT, (err) => {
+	if (err) console.log('error: ', err);
+});
