@@ -15,9 +15,18 @@ module.exports = {
 	},
 	rules: {
 		'indent': ['error', 'tab'],
-		'no-mixed-spaces-and-tabs': 'error'
+		'no-mixed-spaces-and-tabs': 'error',
+		'no-secrets/no-secrets': [
+			'error',
+			{
+				'additionalRegexes': require('eslint-plugin-no-secrets/regexes.js')
+			}
+		]
 	},
-	plugins: ['svelte3'],
+	plugins: [
+		'svelte3',
+		'no-secrets'
+	],
 	overrides: [
 		{
 			files: ['**/*.svelte'],
