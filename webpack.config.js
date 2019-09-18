@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const config = require('sapper/config/webpack.js');
 const pkg = require('./package.json');
-const sveltePreprocess = require('svelte-preprocess');
+const { scss, globalStyle, postcss } = require('svelte-preprocess');
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -11,9 +11,7 @@ const alias = { svelte: path.resolve('node_modules', 'svelte') };
 const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 
-const preprocess = sveltePreprocess({
-	// scss: true,
-});
+const preprocess = [scss(), globalStyle(), postcss({})];
 
 module.exports = {
 	client: {
@@ -22,11 +20,6 @@ module.exports = {
 		resolve: { alias, extensions, mainFields },
 		module: {
 			rules: [
-				{
-					test: /\.js$/,
-					exclude: /node_modules/,
-					use: ['eslint-loader'],
-				},
 				{
 					test: /\.(svelte|html)$/,
 					use: [
@@ -38,8 +31,7 @@ module.exports = {
 								hotReload: false, // pending https://github.com/sveltejs/svelte/issues/2377
 								preprocess,
 							},
-						},
-						'eslint-loader',
+						}
 					],
 				},
 			],
@@ -65,11 +57,6 @@ module.exports = {
 		module: {
 			rules: [
 				{
-					test: /\.js$/,
-					exclude: /node_modules/,
-					use: ['eslint-loader'],
-				},
-				{
 					test: /\.(svelte|html)$/,
 					use: [
 						{
@@ -80,8 +67,7 @@ module.exports = {
 								dev,
 								preprocess,
 							},
-						},
-						'eslint-loader',
+						}
 					],
 				},
 			],
