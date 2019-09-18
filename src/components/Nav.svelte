@@ -16,9 +16,9 @@
 
 	/* clearfix */
 	ul::after {
+		clear: both;
 		content: '';
 		display: block;
-		clear: both;
 	}
 
 	li {
@@ -27,24 +27,24 @@
 	}
 
 	.selected {
-		position: relative;
 		display: inline-block;
+		position: relative;
 	}
 
 	.selected::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
 		background-color: rgb(255, 62, 0);
-		display: block;
 		bottom: -1px;
+		content: '';
+		display: block;
+		height: 2px;
+		position: absolute;
+		width: calc(100% - 1em);
 	}
 
 	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
 		display: block;
+		padding: 1em 0.5em;
+		text-decoration: none;
 	}
 </style>
 
