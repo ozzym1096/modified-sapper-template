@@ -17,7 +17,7 @@
 	export let post;
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
 	/*
 		By default, CSS is locally scoped to the component,
 		and any unused styles are dead-code-eliminated.
@@ -27,11 +27,11 @@
 		all elements inside .content
 	*/
 	.content {
-		:global(h2) {
+		h2 {
 			font-size: 1.4em;
 			font-weight: 500;
 		}
-		:global(pre) {
+		pre {
 			background-color: #f9f9f9;
 			box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
 			padding: 0.5em;
@@ -39,16 +39,16 @@
 			overflow-x: auto;
 		}
 
-		:global(pre) :global(code) {
+		pre code {
 			background-color: transparent;
 			padding: 0;
 		}
 
-		:global(ul) {
+		ul {
 			line-height: 1.5;
 		}
 
-		:global(li) {
+		li {
 			margin: 0 0 0.5em 0;
 		}
 	}

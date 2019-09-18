@@ -2,15 +2,15 @@
 	h1,
 	figure,
 	p {
-		text-align: center;
 		margin: 0 auto;
+		text-align: center;
 	}
 
 	h1 {
 		font-size: 2.8em;
-		text-transform: uppercase;
 		font-weight: 700;
 		margin: 0 0 0.5em 0;
+		text-transform: uppercase;
 	}
 
 	figure {
@@ -18,9 +18,9 @@
 	}
 
 	img {
-		width: 100%;
-		max-width: 400px;
 		margin: 0 0 1em 0;
+		max-width: 400px;
+		width: 100%;
 	}
 
 	p {
@@ -41,12 +41,8 @@
 <h1>Great success!</h1>
 
 <figure>
-	<img alt="Borat" src="great-success.png" />
+	<img alt='Borat' src='great-success.png'>
 	<figcaption>HIGH FIVE!</figcaption>
 </figure>
 
-<p>
-	<strong>
-		Try editing this file (src/routes/index.svelte) to test live reloading.
-	</strong>
-</p>
+<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
