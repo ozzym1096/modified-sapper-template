@@ -2,6 +2,8 @@
   "name": "modified-sapper-template",
   "description": "TODO",
   "version": "0.0.1",
+  "repository": "TODO",
+  "license": "TODO",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "eslint": "^6.4.0",
+    "eslint-config-problems": "^3.0.1",
     "eslint-plugin-no-secrets": "^0.3.3",
     "eslint-plugin-svelte3": "^2.7.3",
     "node-sass": "^4.12.0",

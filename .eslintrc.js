@@ -1,10 +1,10 @@
 module.exports = {
+	extends: 'problems',
 	env: {
 		browser: true,
 		es6: true,
 		node: true,
 	},
-	extends: ['eslint:recommended'],
 	globals: {
 		Atomics: 'readonly',
 		SharedArrayBuffer: 'readonly',
@@ -14,8 +14,8 @@ module.exports = {
 		sourceType: 'module',
 	},
 	rules: {
-		'indent': ['error', 'tab'],
-		'no-mixed-spaces-and-tabs': 'error',
+		'indent': ['warning', 'tab'],
+		'no-mixed-spaces-and-tabs': 'warning',
 		'no-secrets/no-secrets': [
 			'error',
 			{
