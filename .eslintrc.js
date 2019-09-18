@@ -15,6 +15,11 @@ module.exports = {
 	},
 	rules: {
 		'indent': ['warn', 'tab'],
+		'no-console': ['warn', {
+			'allow': [
+				'error'
+			]
+		}],
 		'no-mixed-spaces-and-tabs': 'warn',
 		'no-secrets/no-secrets': [
 			'error',
