@@ -7,9 +7,8 @@
 
 		if (res.status === 200) {
 			return { post: data };
-		} else {
-			this.error(res.status, data.message);
 		}
+		this.error(res.status, data.message);
 	}
 </script>
 
