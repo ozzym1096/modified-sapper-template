@@ -4,7 +4,7 @@ module.exports = {
 		es6: true,
 		node: true,
 	},
-	extends: ['eslint:recommended', 'prettier'],
+	extends: ['eslint:recommended'],
 	globals: {
 		Atomics: 'readonly',
 		SharedArrayBuffer: 'readonly',
@@ -13,7 +13,10 @@ module.exports = {
 		ecmaVersion: 2018,
 		sourceType: 'module',
 	},
-	rules: {},
+	rules: {
+		'indent': ['error', 'tab'],
+		'no-mixed-spaces-and-tabs': 'error'
+	},
 	plugins: ['svelte3'],
 	overrides: [
 		{
