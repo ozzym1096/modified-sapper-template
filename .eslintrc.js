@@ -14,8 +14,8 @@ module.exports = {
 		sourceType: 'module',
 	},
 	rules: {
-		'indent': ['warning', 'tab'],
-		'no-mixed-spaces-and-tabs': 'warning',
+		'indent': ['warn', 'tab'],
+		'no-mixed-spaces-and-tabs': 'warn',
 		'no-secrets/no-secrets': [
 			'error',
 			{
