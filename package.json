@@ -37,8 +37,8 @@
 		"stylelint-config-standard": "^19.0.0",
 		"stylelint-order": "^3.1.1",
 		"svelte": "^3.24.0",
-		"svelte-loader": "^2.9.0",
+		"svelte-loader": "^3.1.4",
 		"svelte-preprocess": "^3.9.12",
-		"webpack": "^4.43.0"
+		"webpack": "^5.75.0"
 	}
 }
